@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Register Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .Register {
+            text-align: center;
+            margin: 50px auto;
+        }
+        table {
+            margin: 10px auto;
+        }
+        input, select, button {
+            padding: 5px;
+            font-size: 14px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <body>
+        <div class="Register">
+            <h1>Student Register Form</h1>
+            <form onsubmit="addStudent(event)">
+                <table border="2" cellpadding="3" cellspacing="2">
+                    <tr>
+                        <td><label for="name">Name</label></td>
+                        <td><input type="text" placeholder="Enter your Name" id="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="age">Age</label></td>
+                        <td><input type="text" placeholder="Enter your Age" id="age" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Gender</label></td>
+                        <td>
+                            <label for="male">Male</label>
+                            <input type="radio" value="Male" id="male" name="gender" required>
+                            <label for="female">Female</label>
+                            <input type="radio" value="Female" id="female" name="gender">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="course">Course</label></td>
+                        <td>
+                            <select id="course" required>
+                                <option value="">------Select Course--------</option>
+                                <option value="Full Stack Development">Full Stack Development</option>
+                                <option value="Java">Java</option>
+                                <option value="Web Designing">Web Designing</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" id="email" placeholder="Enter your email" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center; background-color: aqua;">
+                            <button type="submit">Save</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+   
+    <div class="container">
+        
+            <table border="2" cellpadding="3" cellspacing="2" style="width:70%; margin: 0 auto;">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Course</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+                <tbody id="studentList"></tbody>
+            </table>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
